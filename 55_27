@@ -1,0 +1,13 @@
+#Linear search
+
+def linearsearch(arr, x):
+   for i in range(len(arr)):
+      if arr[i] == x:
+         return i
+   return -1
+arr = ['R','O','H','I','T','M','A','M']
+x = 'O'
+print("element found at index "+str(linearsearch(arr,x)))
+
+Output:
+element found at index 1

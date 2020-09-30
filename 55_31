@@ -1,4 +1,4 @@
-#implement binary search with user function and dynamic inputs
+#Implement binary search with user function and dynamic inputs
 def binarySearchAppr (arr, start, end, x):
    if end >= start:
       mid = start + (end- start)//2

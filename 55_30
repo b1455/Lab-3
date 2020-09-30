@@ -1,3 +1,4 @@
+#Implement binary search with user function
 def binarySearchAppr (arr, start, end, x):
 if end >= start:
    mid = start + (end- start)//2

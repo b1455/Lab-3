@@ -1,3 +1,5 @@
+#Create a linked list with few sample nodes as static inputs
+
 class Node:
     def __init__(self, data):
        self.data = data

@@ -1,3 +1,5 @@
+#Create a linked list with inputs from user console
+
 lst = [ ] 
 n = int(input("Enter number of elements : ")) 
   

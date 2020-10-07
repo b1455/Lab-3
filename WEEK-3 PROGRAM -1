@@ -1,5 +1,5 @@
-# Python program to convert a 
-# matrix to sparse matrix 
+#Represent a sparse matrix
+
 def displayMatrix(matrix): 
       
     for row in matrix: 

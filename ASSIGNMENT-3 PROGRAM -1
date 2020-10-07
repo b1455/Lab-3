@@ -1,4 +1,4 @@
-#Sum of two sparse matrix
+#Perform addition of two sparse matrices
 
 normalMatrix1 = [[1, 0, 0, 0],
                 [0, 2, 0, 0],

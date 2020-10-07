@@ -1,4 +1,4 @@
-#Linear search
+#Implement linear search
 
 def linearsearch(arr, x):
    for i in range(len(arr)):

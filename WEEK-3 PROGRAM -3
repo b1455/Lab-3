@@ -1,3 +1,5 @@
+#Prompt the user to input values for a matrix, convert the matrix to a sparse matrix using some threshold value
+
 a= int(input("Enter Number of rows"))
 b= int(input("Enter columns"))
 matrix=[]

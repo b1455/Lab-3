@@ -1,3 +1,5 @@
+#Perform multiplication of two sparse matrices
+
 from scipy import sparse
 from scipy.stats import uniform
 import numpy as np

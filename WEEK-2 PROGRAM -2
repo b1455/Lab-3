@@ -1,5 +1,5 @@
-# Python3 program to copy the contents of one 
-# array into another in the reverse order 
+#Copy the contents from one array to another array in reverse order 
+ 
 import math as mt 
 def printArray(arr, Len): 
     for i in range(Len): 

@@ -1,4 +1,4 @@
-#3 digit lcm calculation
+#Find the LCM and GCD of three numbers
 h=input("(1) 2 Digit LCM Or \n(2) 3 Digit LCM\n :")
 if h == "2":
     while True:

@@ -1,5 +1,4 @@
-# Python program for Sparse Matrix Representation 
-# using arrays
+#Represent a sparse matrix through user defined function
   
 sparseMatrix = [[0,0,3,0,4],[0,0,5,7,0],[0,0,0,0,0],[0,2,6,0,0]] 
    

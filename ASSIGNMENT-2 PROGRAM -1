@@ -1,4 +1,4 @@
-# Searching an element in a list/array in python 
+#Search for an element in an array by calling function
   
 def search(arr, x): 
   

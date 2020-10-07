@@ -1,4 +1,4 @@
-#Implement linear search with user function
+#Implement linear search with user functions and dynamic inputs
 def linear_search(alist, key):
     """Return index of key in alist. Return -1 if key not present."""
     for i in range(len(alist)):

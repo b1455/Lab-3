@@ -1,3 +1,5 @@
+#Implement binary search
+
 def binary_search(item_list,item):
 	first = 0
 	last = len(item_list)-1

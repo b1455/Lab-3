@@ -1,3 +1,5 @@
+#Implement binary search with alteast 3 suitable test cases of your choice
+
 def bsearch(lys, val):
     first = 0
     last = len(lys)-1

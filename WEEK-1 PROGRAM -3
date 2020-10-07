@@ -1,6 +1,5 @@
-# Python program to find the L.C.M. of two input number
+#Find the LCM and GCD of two numbers 
 
-# This function computes GCD 
 def compute_gcd(x, y):
 
    while(y):

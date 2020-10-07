@@ -1,5 +1,4 @@
-# Python 3 program to remove a given  
-# element from an array 
+#Take choice from user and perform particular operation on array(1.Copy, 2.Remove duplicates, 3.Delete at kth index, 4.Search an item, 5.Display contents)
 
 def deleteElement(arr, n, x): 
       

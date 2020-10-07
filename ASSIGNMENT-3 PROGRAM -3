@@ -1,3 +1,5 @@
+Find transpose of a matrix
+
 from scipy import sparse
 from scipy.stats import uniform
 import numpy as np

@@ -1,4 +1,4 @@
-# Python code to remove duplicate elements 
+#Delete the duplicate elements from an array
 def Remove(duplicate): 
     final_list = [] 
     for num in duplicate: 

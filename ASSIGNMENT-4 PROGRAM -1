@@ -1,3 +1,5 @@
+#Implement binary search with user function
+
 def bsearch(lys, val):
     first = 0
     last = len(lys)-1

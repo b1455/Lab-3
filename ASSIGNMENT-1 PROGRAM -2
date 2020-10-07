@@ -1,6 +1,4 @@
-# Python program to illustrate... 
-# To print total number of twin prime 
-# using Sieve of Eratosthenes 
+#Print twin primes up to a specified limit 
   
 def printTwinPrime(n):  
     prime = [True for i in range(n + 2)] 

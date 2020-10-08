@@ -1,4 +1,4 @@
-Delete the node from a linked list with given key.
+#Delete the node from a linked list with given key.
 
 class Node:  
     def __init__(self, data):  
@@ -62,3 +62,9 @@ if __name__=='__main__':
     print("\nLinked List after Deletion is: ") 
   
     printList(head) 
+
+Output:
+Created Linked List: 
+2 2 1 8 2 3 2 7 
+Linked List after Deletion is: 
+1 8 3 2 7 

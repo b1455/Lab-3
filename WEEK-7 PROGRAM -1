@@ -58,3 +58,9 @@ dList.addNode(5);
      
    
 dList.display();  
+
+
+Output:
+
+Nodes of doubly linked list: 
+1 2 3 4 5

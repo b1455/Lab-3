@@ -1,0 +1,102 @@
+#Iddentify the biggest and smallest key in a doubly linked list containing integers
+  
+class Node:  
+      
+    def __init__(self, data):  
+        self.data = data  
+        self.prev = None
+        self.next = None
+  
+
+def pairProduct(head, x): 
+  
+    
+    first = head 
+    second = head 
+    while (second.next != None): 
+        second = second.next
+  
+   
+    found = False
+  
+    
+    while (first != None and
+           second != None and first != second and 
+           second.next != first) : 
+                 
+        
+        if ((first.data * second.data) == x) : 
+            found = True
+            print("(" , first.data,  
+                  ", ", second.data, ")") 
+  
+            
+            first = first.next
+  
+          
+            second = second.prev 
+          
+        else : 
+            if ((first.data * second.data) < x): 
+                first = first.next
+            else: 
+                second = second.prev 
+      
+    
+    if (found == False): 
+        print( "No pair found") 
+  
+  
+def push( head, data): 
+  
+    temp = Node(0) 
+    temp.data = data 
+    temp.next = temp.prev = None
+    if (head == None): 
+        (head) = temp 
+    else : 
+        temp.next = head 
+        (head).prev = temp 
+        (head) = temp 
+    return head 
+      
+""" Function to find the largest  
+nodes in Doubly Linked List """
+def LargestInDLL( head_ref): 
+  
+    max = None
+    temp = None
+  
+    """ initialize two pointer temp  
+    and max on the head node """
+    temp = max = head_ref 
+  
+    
+    while (temp != None):  
+  
+        """ if temp's data is greater than 
+        max's data, then put max = temp 
+        and return max.data """
+        if (temp.data > max.data): 
+            max = temp 
+  
+        temp = temp.next
+      
+    return max.data
+    
+if __name__ == "__main__":  
+  
+ 
+    head = None
+  
+    
+    head = push(head, 20) 
+    head = push(head, 14) 
+    head = push(head, 181) 
+    head = push(head, 100) 
+  
+    print( LargestInDLL(head)) 
+    
+   Output:
+
+ 181 

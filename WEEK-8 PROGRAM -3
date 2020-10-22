@@ -1,4 +1,4 @@
-#Insert a new node at the end of this doubly linked list.
+#Insert a node at the end of this doubly linked list.
 
 class Node:    
     def __init__(self,data):    

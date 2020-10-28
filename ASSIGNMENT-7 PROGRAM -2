@@ -1,102 +1,93 @@
 #Iddentify the biggest and smallest key in a doubly linked list containing integers
-  
+
 class Node:  
-      
-    def __init__(self, data):  
-        self.data = data  
-        self.prev = None
-        self.next = None
-  
-
-def pairProduct(head, x): 
-  
-    
-    first = head 
-    second = head 
-    while (second.next != None): 
-        second = second.next
-  
+    def __init__(self,data):  
+        self.data = data;  
+        self.previous = None;  
+        self.next = None;  
+          
+class MinMax:  
    
-    found = False
-  
-    
-    while (first != None and
-           second != None and first != second and 
-           second.next != first) : 
-                 
+    def __init__(self):  
+        self.head = None;  
+        self.tail = None;  
+          
+     
+    def addNode(self, data):  
         
-        if ((first.data * second.data) == x) : 
-            found = True
-            print("(" , first.data,  
-                  ", ", second.data, ")") 
-  
+        newNode = Node(data);  
+          
+         
+        if(self.head == None):  
+             
+            self.head = self.tail = newNode;  
+           
+            self.head.previous = None;  
+         
+            self.tail.next = None;  
+        else:  
+         
+            self.tail.next = newNode;  
             
-            first = first.next
-  
+            newNode.previous = self.tail;  
           
-            second = second.prev 
+            self.tail = newNode;  
+        
+            self.tail.next = None;  
+              
+    
+    def minimumNode(self):  
+      
+        current = self.head;  
           
-        else : 
-            if ((first.data * second.data) < x): 
-                first = first.next
-            else: 
-                second = second.prev 
+       
+        if(self.head == None):  
+            print("List is empty");  
+            return 0;  
+        else:  
+           
+            min = self.head.data;  
+            while(current != None):  
+                
+                if(min > current.data):  
+                    min = current.data;  
+                current = current.next;  
+        return min;  
+          
+   
+    def maximumNode(self):  
       
-    
-    if (found == False): 
-        print( "No pair found") 
+        current = self.head;  
+          
+     
+        if(self.head == None):  
+            print("List is empty");  
+            return 0;  
+        else:  
+          
+            max = self.head.data;  
+        
+            while(current != None):  
+                if(current.data > max):  
+                    max = current.data;  
+                current = current.next;  
+        return max;  
+              
+dList = MinMax();  
   
+dList.addNode(5);  
+dList.addNode(7);  
+dList.addNode(9);  
+dList.addNode(1);  
+dList.addNode(2);  
+   
   
-def push( head, data): 
-  
-    temp = Node(0) 
-    temp.data = data 
-    temp.next = temp.prev = None
-    if (head == None): 
-        (head) = temp 
-    else : 
-        temp.next = head 
-        (head).prev = temp 
-        (head) = temp 
-    return head 
-      
-""" Function to find the largest  
-nodes in Doubly Linked List """
-def LargestInDLL( head_ref): 
-  
-    max = None
-    temp = None
-  
-    """ initialize two pointer temp  
-    and max on the head node """
-    temp = max = head_ref 
-  
-    
-    while (temp != None):  
-  
-        """ if temp's data is greater than 
-        max's data, then put max = temp 
-        and return max.data """
-        if (temp.data > max.data): 
-            max = temp 
-  
-        temp = temp.next
-      
-    return max.data
-    
-if __name__ == "__main__":  
-  
+print("Minimum value node in the list: "+ str(dList.minimumNode()));  
  
-    head = None
-  
-    
-    head = push(head, 20) 
-    head = push(head, 14) 
-    head = push(head, 181) 
-    head = push(head, 100) 
-  
-    print( LargestInDLL(head)) 
-    
-   Output:
+print("Maximum value node in the list: "+ str(dList.maximumNode())); 
 
- 181 
+Output:
+
+
+Minimum value node in the list: 1
+Maximum value node in the list: 9

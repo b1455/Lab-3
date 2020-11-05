@@ -1,3 +1,5 @@
+#Implement PUSH operation subject to exception
+
 stack = []
 
 stack.append('a')

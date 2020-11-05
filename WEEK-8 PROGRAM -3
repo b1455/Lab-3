@@ -1,3 +1,5 @@
+#POP a specific element from a stack
+
 stack = []
 
 stack.append('a')

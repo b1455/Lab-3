@@ -1,0 +1,129 @@
+#Create a binary tree and insert atleast 12 nodes into it with compile time initialization
+
+SIZE = 50
+  
+class node:
+     
+    def __init__(self, data):
+       
+        self.data = data
+        self.right = None
+        self.left = None
+ 
+class Queue:
+     
+    def __init__(self):
+       
+        self.front = None
+        self.rear = None
+        self.size = 0
+        self.array = []
+ 
+def newNode(data):
+     
+    temp = node(data)
+    return temp
+ 
+def createQueue(size):
+     
+    global queue    
+    queue = Queue();
+    queue.front = queue.rear = -1; 
+    queue.size = size; 
+    queue.array = [None for i in range(size)]
+    return queue; 
+     
+def isEmpty(queue):
+ 
+    return queue.front == -1
+ 
+def isFull(queue):
+     
+    return queue.rear == queue.size - 1; 
+ 
+def hasOnlyOneItem(queue):
+     
+    return queue.front == queue.rear; 
+ 
+def Enqueue(root):
+ 
+    if (isFull(queue)):
+        return; 
+     
+    queue.rear+=1
+    queue.array[queue.rear] = root; 
+ 
+    if (isEmpty(queue)):
+        queue.front+=1; 
+ 
+def Dequeue():
+ 
+    if (isEmpty(queue)):
+        return None; 
+ 
+    temp = queue.array[queue.front]; 
+ 
+    if(hasOnlyOneItem(queue)):
+        queue.front = queue.rear = -1; 
+    else:
+        queue.front+=1
+ 
+    return temp; 
+ 
+def getFront(queue):
+     
+    return queue.array[queue.front];
+ 
+def hasBothChild(temp):
+ 
+    return (temp and temp.left and
+            temp.right); 
+     
+def insert(root, data, queue):
+ 
+    temp = newNode(data); 
+  
+    if not root:
+        root = temp;
+    else:
+     
+        front = getFront(queue); 
+ 
+        if (not front.left):
+            front.left = temp; 
+
+        elif (not front.right):
+            front.right = temp; 
+  
+        if (hasBothChild(front)): 
+            Dequeue();
+ 
+    Enqueue(temp); 
+    return root
+  
+def levelOrder(root):
+ 
+    queue = createQueue(SIZE); 
+    Enqueue(root); 
+     
+    while (not isEmpty(queue)):    
+        temp = Dequeue();         
+        print(temp.data, end = ' ')
+        if (temp.left): 
+            Enqueue(temp.left); 
+        if (temp.right): 
+            Enqueue(temp.right); 
+  
+if __name__ == "__main__":
+     
+    root = None
+    queue = createQueue(SIZE); 
+     
+    for i in range(1, 13):
+        root=insert(root, i, 
+                    queue); 
+      
+    levelOrder(root); 
+    
+    Output:
+    1 2 3 4 5 6 7 8 9 10 11 12
